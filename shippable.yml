@@ -10,16 +10,16 @@ env:
 build:
   cache: true
   ci:
-    - apt-get install python-dev
-    - pip install awsebcli
+    # - apt-get install python-dev
+    # - pip install awsebcli
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - mysql -e 'create database if not exists test;'
-    - mkdir -p ~/.aws
-    - echo '[profile eb-cli]' > ~/.aws/config
-    - echo "aws_access_key_id = $AWSAccessKeyId" >> ~/.aws/config
-    - echo "aws_secret_access_key = $AWSSecretKey" >> ~/.aws/config
-    - mkdir -p .elasticbeanstalk
-    - cp config.yml .elasticbeanstalk/
+    # - mysql -e 'create database if not exists test;'
+    # - mkdir -p ~/.aws
+    # - echo '[profile eb-cli]' > ~/.aws/config
+    # - echo "aws_access_key_id = $AWSAccessKeyId" >> ~/.aws/config
+    # - echo "aws_secret_access_key = $AWSSecretKey" >> ~/.aws/config
+    # - mkdir -p .elasticbeanstalk
+    # - cp config.yml .elasticbeanstalk/
   on_success:
-    - eb init && eb deploy
+    # - eb init && eb deploy
